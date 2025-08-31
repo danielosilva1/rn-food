@@ -3,6 +3,7 @@ import { Header } from "../components/header";
 
 import Constants from "expo-constants";
 import { Banner } from "../components/banner";
+import { SearchInput } from "../components/search-input";
 
 const statusBarHeight = Constants.statusBarHeight;
 
@@ -17,6 +18,8 @@ export default function Index() {
         <Header />
 
         <Banner />
+
+        <SearchInput placeholder="Procure sua comida..." />
       </View>
     </ScrollView>
   );
