@@ -3,6 +3,7 @@ import { Banner } from "../components/banner";
 import { Header } from "../components/header";
 import { SearchInput } from "../components/search-input";
 import { Section } from "../components/section";
+import { TrendingFoods } from "../components/trending";
 
 import Constants from "expo-constants";
 
@@ -28,6 +29,8 @@ export default function Index() {
           action={() => console.log("Clicou no 'Veja mais'")}
           size="text-2xl"
         />
+
+        <TrendingFoods />
       </View>
     </ScrollView>
   );
