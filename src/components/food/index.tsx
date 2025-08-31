@@ -13,11 +13,11 @@ export function CardHorizontalFood({ food }: CardHorizontalFoodProps) {
 
       <View className="flex flex-row bg-neutral-900/90 gap-1 rounded-full absolute top-2 right-3 items-center px-2 py-1 justify-center">
         <Ionicons name="star" size={14} color="#caba04" />
-        <Text className="text-white text-sm">{food.rating}</Text>
+        <Text className="text-white text-sm">{food.rating.toFixed(1)}</Text>
       </View>
 
       <Text className="text-green-700 font-medium text-lg">
-        R$ {food.price}
+        R$ {food.price.toFixed(2)}
       </Text>
       <Text className="text-black mt-1">{food.name}</Text>
       <Text className="text-neutral-600 text-sm">
