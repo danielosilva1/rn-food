@@ -7,6 +7,7 @@ import { TrendingFoods } from "../components/trending";
 
 import Constants from "expo-constants";
 import { RestaurantsHorizontalList } from "../components/restaurants/horizontal-list";
+import { RestaurantsVerticalList } from "../components/restaurants/vertical-list";
 
 const statusBarHeight = Constants.statusBarHeight;
 
@@ -42,6 +43,13 @@ export default function Index() {
       />
 
       <RestaurantsHorizontalList />
+
+      <Section
+        title="Restaurantes"
+        size="text-xl"
+      />
+
+      <RestaurantsVerticalList />
     </ScrollView>
   );
 }
