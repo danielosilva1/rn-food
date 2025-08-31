@@ -1,9 +1,10 @@
 import { ScrollView, View } from "react-native";
+import { Banner } from "../components/banner";
 import { Header } from "../components/header";
+import { SearchInput } from "../components/search-input";
+import { Section } from "../components/section";
 
 import Constants from "expo-constants";
-import { Banner } from "../components/banner";
-import { SearchInput } from "../components/search-input";
 
 const statusBarHeight = Constants.statusBarHeight;
 
@@ -20,6 +21,13 @@ export default function Index() {
         <Banner />
 
         <SearchInput placeholder="Procure sua comida..." />
+
+        <Section
+          title="Comidas em alta"
+          label="Veja mais"
+          action={() => console.log("Clicou no 'Veja mais'")}
+          size="text-2xl"
+        />
       </View>
     </ScrollView>
   );
