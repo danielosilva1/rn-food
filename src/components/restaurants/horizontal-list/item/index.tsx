@@ -1,11 +1,13 @@
 import { Restaurant } from "@/src/types/restaurant";
 import { Image, Pressable, Text } from "react-native";
 
-interface RestaurantCardProps {
+interface RestaurantHorizontalItemProps {
   restaurant: Restaurant;
 }
 
-export function RestaurantCard({ restaurant }: RestaurantCardProps) {
+export function RestaurantHorizontalItem({
+  restaurant,
+}: RestaurantHorizontalItemProps) {
   return (
     <Pressable
       className="flex flex-col items-center justify-center"

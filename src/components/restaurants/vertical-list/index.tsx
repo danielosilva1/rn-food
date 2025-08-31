@@ -1,9 +1,9 @@
 import { Restaurant } from "@/src/types/restaurant";
 import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
-import { RestaurantCard } from "./card";
+import { RestaurantHorizontalItem } from "../horizontal-list/item";
 
-export function Restaurants() {
+export function RestaurantsVerticalList() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export function Restaurants() {
   return (
     <FlatList
       data={restaurants}
-      renderItem={({ item }) => <RestaurantCard restaurant={item} />}
+      renderItem={({ item }) => <RestaurantHorizontalItem restaurant={item} />}
       horizontal={true}
       contentContainerStyle={{ gap: 14, paddingLeft: 16, paddingRight: 16 }}
       showsHorizontalScrollIndicator={false}

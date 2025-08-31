@@ -6,7 +6,7 @@ import { Section } from "../components/section";
 import { TrendingFoods } from "../components/trending";
 
 import Constants from "expo-constants";
-import { Restaurants } from "../components/restaurants";
+import { RestaurantsHorizontalList } from "../components/restaurants/horizontal-list";
 
 const statusBarHeight = Constants.statusBarHeight;
 
@@ -23,25 +23,25 @@ export default function Index() {
         <Banner />
 
         <SearchInput placeholder="Procure sua comida..." />
-
-        <Section
-          title="Comidas em alta"
-          label="Veja mais"
-          action={() => console.log("Clicou no 'Veja mais'")}
-          size="text-2xl"
-        />
-
-        <TrendingFoods />
-
-        <Section
-          title="Famosos no RNFood"
-          label="Veja todos"
-          action={() => console.log("Clicou no 'Veja todos'")}
-          size="text-xl"
-        />
-
-        <Restaurants />
       </View>
+
+      <Section
+        title="Comidas em alta"
+        label="Veja mais"
+        action={() => console.log("Clicou no 'Veja mais'")}
+        size="text-2xl"
+      />
+
+      <TrendingFoods />
+
+      <Section
+        title="Famosos no RNFood"
+        label="Veja todos"
+        action={() => console.log("Clicou no 'Veja todos'")}
+        size="text-xl"
+      />
+
+      <RestaurantsHorizontalList />
     </ScrollView>
   );
 }
